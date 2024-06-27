@@ -10,7 +10,7 @@ import pandas as pd
 labelencoder = LabelEncoder()
 
 # Load the saved model
-model_path = 'LSTM_CNN_MODEL_1.h5'
+model_path = 'LSTM_CNN_INDIAN_2.h5'
 model = load_model(model_path)
 
 # Label mapping
