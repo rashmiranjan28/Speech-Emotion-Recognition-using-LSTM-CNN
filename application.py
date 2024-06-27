@@ -24,7 +24,7 @@ label_mapping = {0: 'angry',
                  7: 'sad'}
 
 # Set the title of the Streamlit app
-st.title("Emotion Detection from Audio")
+st.title("Speech Emotion Recognition")
 
 # File uploader for audio files
 audio_file = st.file_uploader("Upload an audio file:", type=["mp3", "wav"])
