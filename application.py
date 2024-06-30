@@ -81,6 +81,15 @@ if st.button("Predict"):
         st.write(f"Major emotion: {major_emotion}")
         
         st.success(f"Emotion log saved to {log_file_path}")
+        
+        # Add download button for the emotion log file
+        with open(log_file_path, "rb") as file:
+            btn = st.download_button(
+                label="Download Emotion Log",
+                data=file,
+                file_name='emotion_log.csv',
+                mime='text/csv'
+            )
     else:
         st.error("Please upload an audio file.")
 
