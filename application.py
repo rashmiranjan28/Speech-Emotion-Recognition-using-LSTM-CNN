@@ -29,6 +29,9 @@ st.title("Speech Emotion Recognition")
 # File uploader for audio files
 audio_file = st.file_uploader("Upload an audio file:", type=["mp3", "wav"])
 
+# Set the interval for segments
+interval = st.number_input("Set the interval (1-15 seconds) for emotion detection segments:", min_value=1.0, max_value=15.0, value=3.0, step=0.5)
+
 # Button to upload
 if st.button("Upload"):
     if audio_file:
@@ -43,7 +46,7 @@ if st.button("Upload"):
         st.error("Please upload an audio file.")
 
 # Function to process audio and predict emotions
-def predict_emotions(audio_path, interval=3):
+def predict_emotions(audio_path, interval):
     audio_data, samplerate = sf.read(audio_path)
     duration = len(audio_data) / samplerate
     emotions = []
@@ -66,7 +69,7 @@ def predict_emotions(audio_path, interval=3):
 # Button to predict
 if st.button("Predict"):
     if audio_file:
-        emotions = predict_emotions('uploaded_audio.wav')
+        emotions = predict_emotions('uploaded_audio.wav', interval=interval)
         
         # Create a DataFrame to display emotions
         emotions_df = pd.DataFrame(emotions, columns=["Start", "End", "Emotion"])
