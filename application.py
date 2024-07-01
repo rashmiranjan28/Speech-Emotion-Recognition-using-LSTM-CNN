@@ -30,7 +30,7 @@ st.title("Speech Emotion Recognition")
 audio_file = st.file_uploader("Upload an audio file:", type=["mp3", "wav"])
 
 # Set the interval for segments
-interval = st.number_input("Set the interval (1-15 seconds) for emotion detection segments:", min_value=1.0, max_value=15.0, value=3.0, step=0.5)
+interval = st.number_input("Set the interval (1-15 seconds) for emotion detection segments:", min_value=1.0, max_value=15.0, value=3.0, step=0.1)
 
 # Button to upload
 if st.button("Upload"):
