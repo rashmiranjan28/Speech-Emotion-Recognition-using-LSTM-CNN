@@ -97,7 +97,6 @@ pooch==1.8.2
 pyAudioAnalysis==0.3.14
 pycparser==2.22
 requests==2.32.3
-scikit-learn==1.5.1
 scipy==1.14.0
 soundfile==0.12.1
 soxr==0.3.7
