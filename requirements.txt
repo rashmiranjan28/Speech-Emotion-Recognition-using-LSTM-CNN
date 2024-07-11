@@ -92,7 +92,6 @@ librosa==0.10.2.post1
 llvmlite==0.43.0
 msgpack==1.0.8
 numba==0.60.0
-numpy==2.0.0
 packaging==24.1
 platformdirs==4.2.2
 pooch==1.8.2
