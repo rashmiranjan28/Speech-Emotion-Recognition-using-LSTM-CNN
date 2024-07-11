@@ -95,7 +95,7 @@ def word_count1(audio_path):
     else:
         return [0, None, 0.0]
     
-word_count('angry_Akash.wav')
+# word_count('angry_Akash.wav')
 
 # print(word_count1(r'c:\Users\hp\OneDrive\Desktop\Major Emotions\Mixed\Angry-1-3-1.wav'))
 # Example usage
